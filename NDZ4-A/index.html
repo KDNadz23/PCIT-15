@@ -94,10 +94,19 @@ function Calculator(){
 
     const [calc, setCalc] = React.useState({
     current: '0',
-    totsl: '',
+    total: '',
     isInitial: true,
     preOp: ''
     });
+
+    function handleClear(){
+        setCalc({ 
+            current: '0',
+            total: '',
+            isInitial: true,
+            preOp: ''
+        })
+    }
     
     return(
         <div className="calculator">
